@@ -1,0 +1,118 @@
+\documentclass[10pt]{article}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+
+%%%%%%%%%%%%%%%%%%%%
+\newcommand{\hide}[1]{}
+
+\usepackage{natbib}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+
+\hide{
+\usepackage{amscd}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{cases}		 
+\usepackage{cutwin}
+\usepackage{enumerate}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\usepackage{lipsum}
+\usepackage{mathrsfs}	
+\usepackage{multimedia}
+\usepackage{wrapfig}
+}
+\bibliographystyle{humanbio}
+
+	 
+%\input{/usr/local/LATEX/Lee_newcommands.tex}
+\newcommand{\itemlist}[1]{\begin{itemize}#1\end{itemize}}
+\newcommand{\enumlist}[1]{\begin{enumerate}#1\end{enumerate}}
+\newcommand{\desclist}[1]{\begin{description}#1\end{description}}
+
+\newcommand{\Answer}[1]{\begin{quote}{\color{blue}#1}\end{quote}}
+\newcommand{\AND}{\wedge}
+\newcommand{\OR}{\vee}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\lra}{\leftrightarrow}
+
+\title {Projekt ZPR: Ewolucja pojazdów}
+\author{Rafał Berdyga \\
+Marta Mejer \\
+}
+\date{}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+{\bf Opis zadania}:  Oprogramowanie przeprowadzające ewolucję sztucznych pojazdów w 2D. \\ \par
+Pojazdy (populacja N osobników reprezentowanych na planszy przez obiekty graficzne) poruszają się po
+prostej drodze. Celem jest przejechanie jak najdłuższego odcinka omijając pojawiające się na jezdni
+przeszkody (statyczne i dynamiczne). Pojazdy podlegają ewolucji poprzez krzyżowanie cech najlepszych
+osobników poprzedniej generacji i mutację. Użytkownik może wpływać na proces ewolucji poprzez zmienianie wartości parametrów takich jak współczynnik mutacji czy liczebność populacji początkowej.
+Program ma postać responsywnej aplikacji okienkowej z prostym GUI. Oprócz planszy, po której
+poruszają się pojazdy, w oknie programu znajduje się też menu dla użytkownika, przy pomocy którego
+może on ustawiać wartości wybranych parametrów, oraz tabela przedstawiająca klasyfikację
+najlepszych pojazdów wygenerowanych podczas jednego procesu ewolucyjnego.
+\section*{Lista Funkcjonalności:}
+\itemlist{
+\item Wyświetlanie planszy wraz poruszającymi się pojazdami oraz przeszkodami (statycznymi i dynamicznymi)
+\item Ewolucja generowanych pojazdów
+\item Podręczne menu dla użytkownika, w którym może on ustawiać parametry takie jak:
+\itemlist{
+\item rozmiar populacji
+\item stopień mutacji
+}
+\item Wyświetlanie tabeli z danymi najlepszych pojazdów
+}
+\clearpage
+\section*{Podział prac:}
+\maketitle
+{\bf Suma}: 108h
+\itemlist{
+\item Poszerzanie wiedzy w zakresie algorytmów ewolucyjnych - 10h
+\item Front-end - 23h
+\itemlist{
+\item UX - 15h
+\itemlist{
+\item intuicyjny interfejs użytkownika - 7h
+\item responsywność interfejsu i planszy - 8h
+}
+\item prezentacja obiektów graficznych na planszy - 5h
+\item prezentacja danych na temat wyników symulacji - 3h
+}
+\item Back-end - 65h
+\itemlist{
+\item algorytm generujący nowe pokolenie pojazdów - 39h
+\itemlist{
+\item tworzenie pierwszego pokolenia pojazdów o losowych parametrach - 3h
+\item tworzenie kolejnych pokoleń pojazdów - 36h
+\itemlist{
+\item algorytm wybierający pożądane cechy z poprzedniego pokolenia - 15h
+\item przekazywanie odpowiednich genotypów do dziedziczących pokoleń - 14h
+\item mutacja osobników pokolenia - 7h
+}
+\item ruch pojedynczego pojazdu - 4h
+}
+\item generacja przeszkód napotykanych na drodze (wraz z obsługą kolizji) - 16h
+\itemlist{
+\item przeszkody statyczne - 6h
+\item przeszkody poruszające się w przeciwnym kierunku - 10h
+}
+\item generacja obiektów wspomagających pojazdy ewolucyjne - 10h
+}
+\item Testowanie oprogramowania - 10h
+}
+
+\end{document}  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
