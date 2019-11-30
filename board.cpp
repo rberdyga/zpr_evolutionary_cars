@@ -65,7 +65,6 @@ void Board::keyPressEvent(QKeyEvent *event)
     /*switch (event->key())
     {
     case Qt::Key_Left:
-
     }*/
 
 

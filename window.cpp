@@ -58,7 +58,7 @@ void Window::settingLayout()
 void Window::setButtonsSize()
 {
     QScreen *screen = QGuiApplication::primaryScreen();
-    QRect  screenGeometry = screen->geometry();
+    QRect screenGeometry = screen->geometry();
     int height = screenGeometry.height();
     int width = screenGeometry.width();
 
@@ -70,10 +70,9 @@ void Window::setButtonsSize()
 
 void Window::connectSignals()
 {
-
-    connect(startButton, &QPushButton::clicked, board, &Board::start);
+    /*connect(startButton, &QPushButton::clicked, board, &Board::start);
     //connect(quitButton, &QPushButton::clicked, , &Board::start);
-    connect(pauseButton, &QPushButton::clicked, board, &Board::pause);
+    connect(pauseButton, &QPushButton::clicked, board, &Board::pause);*/
 
     //#if __cplusplus >= 201402L
         //connect(board, &Board::)
