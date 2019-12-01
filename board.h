@@ -1,3 +1,28 @@
+/*
+ *
+ * #ifndef BOARD_H
+#define BOARD_H
+
+#include <QGraphicsScene>
+#include <QGraphicsView>
+#include <QTimer>
+
+class Car;
+
+class Board: public QGraphicsView
+{
+    Q_OBJECT
+public:
+    explicit Board(QWidget *parent = nullptr);
+    QGraphicsScene* scene;
+    Car* car;
+};
+
+
+
+#endif // BOARD_H*/
+
+
 #ifndef BOARD_H
 #define BOARD_H
 

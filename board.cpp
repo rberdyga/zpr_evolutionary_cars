@@ -1,3 +1,19 @@
+/* wersja z QGraphicsScene
+ *
+ * #include "board.h"
+
+Board::Board(QWidget *parent) : QGraphicsView(parent)
+{
+    scene = new QGraphicsScene();
+    QGraphicsView view(scene);
+    view.show();
+
+
+    scene->addText("Hello, world!");
+    scene->setBackgroundBrush(Qt::blue);
+} */
+
+
 #include <QtWidgets>
 
 #include "board.h"

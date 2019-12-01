@@ -5,6 +5,12 @@
 
 Window::Window(QWidget *parent) : QWidget(parent)
 {
+    //symulacja powinna byc w klasie Board
+    //potrzeba klasy, ktora obsluzy symulacje.
+    //
+    //Board srednio zdaje egzamin.
+    //
+    //Calosc jest juz umieszczona w glownym oknie
     board = new Board;
 
     createWidgets();
@@ -30,7 +36,7 @@ void Window::createWidgets()
 void Window::settingLayout()
 {
     QHBoxLayout *simulationLayout = new QHBoxLayout;
-    simulationLayout->addWidget(board);
+    simulationLayout->addWidget(board); //dodawanie glownej symulacji
 
     setButtonsSize(); //zakomentowac dla responsywnosci
 
@@ -71,7 +77,7 @@ void Window::setButtonsSize()
 void Window::connectSignals()
 {
     /*connect(startButton, &QPushButton::clicked, board, &Board::start);
-    //connect(quitButton, &QPushButton::clicked, , &Board::start);
+    //connect(quitButton, &QPushButton::clicked, qApp, &Board::start);
     connect(pauseButton, &QPushButton::clicked, board, &Board::pause);*/
 
     //#if __cplusplus >= 201402L
